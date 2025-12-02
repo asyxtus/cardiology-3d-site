@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -24,3 +27,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Live ECG animation */
+.ecg-line {
+  stroke-dasharray: 60 140;  /* visible part, then hidden part */
+  stroke-dashoffset: 0;
+  animation: ecg-move 1.4s linear infinite;
+}
+
+@keyframes ecg-move {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -200;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
