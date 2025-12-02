@@ -109,7 +109,6 @@ export default function FrenchLayout({
 
         <script
           type="application/ld+json"
-          // @ts-expect-error - JSON.stringify is fine here
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </body>
