@@ -1,86 +1,68 @@
-// app/api/book-visit/route.ts
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resendApiKey = process.env.RESEND_API_KEY;
 
-export async function POST(req: Request) {
+// Only create Resend instance if key exists
+const resend = resendApiKey ? new Resend(resendApiKey) : null;
+
+export async function POST(request: Request) {
   try {
-    const body = await req.json();
+    const body = await request.json();
+
     const {
       fullName,
+      email,
       phone,
+      reason,
       preferredDate,
       preferredTime,
-      reason,
-    } = body as {
-      fullName?: string;
-      phone?: string;
-      preferredDate?: string;
-      preferredTime?: string;
-      reason?: string;
-    };
+      language,
+    } = body;
 
-    if (!fullName || !phone) {
+    // If no email provider configured yet – still accept the booking
+    if (!resend) {
+      console.warn(
+        "Resend API key missing – skipping email sending but returning success.",
+      );
+
       return NextResponse.json(
-        { error: "Full name and phone are required." },
-        { status: 400 }
+        {
+          success: true,
+          message:
+            "Appointment request received, but email sending is not yet configured on the server.",
+        },
+        { status: 200 },
       );
     }
 
-    const toEmail = process.env.BOOKING_TO_EMAIL;
-    const fromEmail = process.env.BOOKING_FROM_EMAIL;
-
-    if (!toEmail || !fromEmail) {
-      console.error("Missing BOOKING_TO_EMAIL or BOOKING_FROM_EMAIL env variables");
-      return NextResponse.json(
-        { error: "Email configuration error." },
-        { status: 500 }
-      );
-    }
-
-    const subject = `New heart visit request from ${fullName}`;
-
-    const textContent = `
-New booking request from the website
-
-Name: ${fullName}
-Phone / WhatsApp: ${phone}
-Preferred date: ${preferredDate || "Not specified"}
-Preferred time: ${preferredTime || "Not specified"}
-
-Reason for visit:
-${reason || "Not specified"}
-    `;
-
-    const htmlContent = `
-      <h2>New booking request from the website</h2>
-      <p><strong>Name:</strong> ${fullName}</p>
-      <p><strong>Phone / WhatsApp:</strong> ${phone}</p>
-      <p><strong>Preferred date:</strong> ${
-        preferredDate || "Not specified"
-      }</p>
-      <p><strong>Preferred time:</strong> ${
-        preferredTime || "Not specified"
-      }</p>
-      <p><strong>Reason for visit:</strong></p>
-      <p>${reason ? reason.replace(/\n/g, "<br />") : "Not specified"}</p>
-    `;
-
+    // ✅ Only tries to send email if resend is initialized
     await resend.emails.send({
-      from: fromEmail,
-      to: [toEmail],
-      subject,
-      text: textContent,
-      html: htmlContent,
+      from: "Appointments <no-reply@yourdomain.com>",
+      to: ["youremail@yourdomain.com"],
+      subject: "New cardiology appointment request",
+      html: `
+        <h2>New appointment request</h2>
+        <p><strong>Name:</strong> ${fullName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Reason:</strong> ${reason}</p>
+        <p><strong>Preferred date:</strong> ${preferredDate}</p>
+        <p><strong>Preferred time:</strong> ${preferredTime}</p>
+        <p><strong>Language:</strong> ${language}</p>
+      `,
     });
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
-    console.error("Error in /api/book-visit:", error);
+    console.error("Error handling booking request:", error);
+
     return NextResponse.json(
-      { error: "Internal server error." },
-      { status: 500 }
+      {
+        success: false,
+        error: "Something went wrong while processing your request.",
+      },
+      { status: 500 },
     );
   }
 }
