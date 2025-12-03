@@ -4,6 +4,14 @@ import React from "react";
 import Navbar from "@/app/components/Navbar";
 
 export const metadata: Metadata = {
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", sizes: "16x16" }
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   title: "Preventive Cardiology in Douala – Dr. Asah Syxtus",
   description:
     "Specialized preventive cardiology in Douala. ECG, echocardiography, hypertension management, lipid control, heart failure assessment, chest pain evaluation, and full preventive medicine provided by Dr. Asah Syxtus at Total Care Medical Clinic.",
