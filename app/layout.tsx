@@ -16,10 +16,10 @@ export const metadata: Metadata = {
   description:
     "Specialized preventive cardiology in Douala. ECG, echocardiography, hypertension management, lipid control, heart failure assessment, chest pain evaluation, and full preventive medicine provided by Dr. Asah Syxtus at Total Care Medical Clinic.",
   alternates: {
-    canonical: "https://yourdomain.com/",
+    canonical: "https://asahcardiology.com/",
     languages: {
-      "en-US": "https://yourdomain.com/",
-      "fr-FR": "https://yourdomain.com/fr",
+      "en-US": "https://asahcardiology.com/",
+      "fr-FR": "https://asahcardiology.com/fr",
     },
   },
   openGraph: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://yourdomain.com/og-image.jpg",
+        url: "https://asahcardiology.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Total Care Medical Clinic – Preventive Cardiology",
@@ -53,9 +53,9 @@ const schemaData = {
         "Hypertension Management",
         "Lipidology",
       ],
-      worksFor: { "@id": "https://yourdomain.com/#clinic" },
-      image: "https://yourdomain.com/dr-asah.jpg",
-      url: "https://yourdomain.com/",
+      worksFor: { "@id": "https://asahcardiology.com/#clinic" },
+      image: "https://asahcardiology.com/dr-asah.jpg",
+      url: "https://asahcardiology.com/",
       description:
         "Cardiologist specializing in preventive medicine, ECG, echocardiography, and heart disease prevention in Douala.",
       address: {
@@ -67,13 +67,13 @@ const schemaData = {
     },
     {
       "@type": "MedicalClinic",
-      "@id": "https://yourdomain.com/#clinic",
+      "@id": "https://asahcardiology.com/#clinic",
       name: "Total Care Medical Clinic Douala",
       description:
         "Preventive medical clinic with cardiology, general medicine, and advanced diagnostics.",
-      url: "https://yourdomain.com/",
+      url: "https://asahcardiology.com/",
       medicalSpecialty: "Cardiology",
-      image: "https://yourdomain.com/clinic.jpg",
+      image: "https://asahcardiology.com/clinic.jpg",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Bonaberi",
@@ -86,8 +86,8 @@ const schemaData = {
     {
       "@type": "LocalBusiness",
       name: "Total Care Medical Clinic Douala – Cardiology",
-      url: "https://yourdomain.com/",
-      image: "https://yourdomain.com/clinic-cardio.jpg",
+      url: "https://asahcardiology.com/",
+      image: "https://asahcardiology.com/clinic-cardio.jpg",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Bonamoussadi",
@@ -99,7 +99,7 @@ const schemaData = {
     {
       "@type": "WebPage",
       name: "Preventive Cardiology in Douala – Dr. Asah Syxtus",
-      url: "https://yourdomain.com/",
+      url: "https://asahcardiology.com/",
       description:
         "Preventive cardiology services including ECG, echocardiography, hypertension, cholesterol management, and early detection.",
     },
@@ -110,7 +110,7 @@ const schemaData = {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://yourdomain.com/",
+          item: "https://asahcardiology.com/",
         },
       ],
     },
