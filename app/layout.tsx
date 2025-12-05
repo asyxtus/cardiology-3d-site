@@ -44,7 +44,7 @@ const schemaData = {
   "@graph": [
     {
       "@type": "Physician",
-      "@id": "https://yourdomain.com/#doctor",
+      "@id": "https://asahcardiology.com/#doctor",
       name: "Dr. Asah Syxtus",
       jobTitle: "Cardiologist",
       medicalSpecialty: [
