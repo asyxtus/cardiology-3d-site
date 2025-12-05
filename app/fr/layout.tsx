@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   description:
     "Consultations spécialisées en cardiologie préventive à Douala. ECG, échographie cardiaque, gestion de l’hypertension, bilan lipidique, dépistage des maladies cardiovasculaires au Total Care Medical Clinic.",
   alternates: {
-    canonical: "https://yourdomain.com/fr",
+    canonical: "https://asahcardiology.com/fr",
     languages: {
-      "fr-FR": "https://yourdomain.com/fr",
-      "en-US": "https://yourdomain.com/",
+      "fr-FR": "https://asahcardiology.com/fr",
+      "en-US": "https://asahcardiology.com/",
     },
   },
   openGraph: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://yourdomain.com/og-image-fr.jpg",
+        url: "https://asahcardiology.com/og-image-fr.jpg",
         width: 1200,
         height: 630,
         alt: "Total Care Medical Clinic – Cardiologie Préventive",
@@ -36,7 +36,7 @@ const schemaData = {
   "@graph": [
     {
       "@type": "Physician",
-      "@id": "https://yourdomain.com/fr/#doctor",
+      "@id": "https://asahcardiology.com/fr/#doctor",
       name: "Dr. Asah Syxtus",
       jobTitle: "Cardiologue",
       medicalSpecialty: [
@@ -45,9 +45,9 @@ const schemaData = {
         "Hypertension",
         "Dyslipidémie",
       ],
-      worksFor: { "@id": "https://yourdomain.com/fr/#clinic" },
-      image: "https://yourdomain.com/dr-asah.jpg",
-      url: "https://yourdomain.com/fr",
+      worksFor: { "@id": "https://asahcardiology.com/fr/#clinic" },
+      image: "https://asahcardiology.com/dr-asah.jpg",
+      url: "https://asahcardiology.com/fr",
       description:
         "Cardiologue spécialisé en médecine préventive, ECG, échocardiographie et dépistage cardiovasculaire à Douala.",
       address: {
@@ -59,16 +59,16 @@ const schemaData = {
     },
     {
       "@type": "MedicalClinic",
-      "@id": "https://yourdomain.com/fr/#clinic",
+      "@id": "https://asahcardiology.com/fr/#clinic",
       name: "Total Care Medical Clinic Douala",
       description:
         "Clinique spécialisée en prévention médicale avec un service de cardiologie et des examens avancés.",
-      url: "https://yourdomain.com/fr",
+      url: "https://asahcardiology.com/fr",
       medicalSpecialty: "Cardiologie",
-      image: "https://yourdomain.com/clinic.jpg",
+      image: "https://asahcardiology.com/clinic.jpg",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Bonamoussadi",
+        streetAddress: "Bonaberi",
         addressLocality: "Douala",
         addressCountry: "CM",
       },
@@ -78,7 +78,7 @@ const schemaData = {
     {
       "@type": "WebPage",
       name: "Cardiologie Préventive à Douala – Dr. Asah Syxtus",
-      url: "https://yourdomain.com/fr",
+      url: "https://asahcardiology.com/fr",
       description:
         "ECG, échocardiographie, gestion de l’hypertension et dépistage cardiovasculaire.",
     },
@@ -89,7 +89,7 @@ const schemaData = {
           "@type": "ListItem",
           position: 1,
           name: "Accueil",
-          item: "https://yourdomain.com/fr",
+          item: "https://asahcardiology.com/fr",
         },
       ],
     },
