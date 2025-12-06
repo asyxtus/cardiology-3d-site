@@ -6,6 +6,7 @@ import AboutSectionFr from "@/app/sections/AboutSectionFr";
 import ClinicSectionFr from "@/app/sections/ClinicSectionFr";
 import BookingSectionFr from "@/app/sections/BookingSectionFr";
 import FooterSectionFr from "@/app/sections/FooterSectionFr";
+import FaqSectionFr from "@/app/sections/FaqSectionFr";
 
 export default function FrenchHomePage() {
   return (
@@ -16,6 +17,7 @@ export default function FrenchHomePage() {
       <AboutSectionFr />
       <ClinicSectionFr />
       <BookingSectionFr />
+      <FaqSectionFr />
       <FooterSectionFr />
     </main>
   );
