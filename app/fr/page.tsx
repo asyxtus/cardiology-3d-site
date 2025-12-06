@@ -1,4 +1,5 @@
 // app/fr/page.tsx
+import Link from "next/link";
 import HeroFr from "@/app/components/HeroFr"; // keep same hero for now
 import ServicesSectionFr from "@/app/sections/ServicesSectionFr";
 import PreventiveTimelineSectionFr from "@/app/sections/PreventiveTimelineSectionFr";
