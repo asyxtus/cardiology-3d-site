@@ -6,6 +6,8 @@ import AboutSection from "./sections/AboutSection";
 import BookingSection from "./sections/BookingSection";
 import ClinicSection from "./sections/ClinicSection";
 import FooterSection from "./sections/FooterSection";
+import FaqSectionEn from "./sections/FaqSectionEn";
+
 
 export default function HomePage() {
   return (
@@ -16,6 +18,7 @@ export default function HomePage() {
       <AboutSection />
       <ClinicSection />
       <BookingSection />
+      <FaqSectionEn />
       <FooterSection />
       {/* Later we will add other sections here */}
     </main>
