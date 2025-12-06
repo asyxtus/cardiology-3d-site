@@ -62,6 +62,27 @@ export default function HeroFr() {
             </p>
           </div>
 
+          <section className="w-full bg-slate-950 py-8 md:py-10">
+  <div className="mx-auto flex max-w-5xl flex-col items-start gap-3 px-4 md:flex-row md:items-center md:justify-between md:px-6">
+    <div>
+      <h2 className="text-base md:text-lg font-semibold text-slate-50">
+        En savoir plus sur votre cardiologue à Douala
+      </h2>
+      <p className="mt-1 text-sm md:text-[15px] text-slate-300">
+        Découvrez le parcours, l’approche en cardiologie préventive et les
+        services du Dr Asah Syxtus dédiés aux patients de Douala.
+      </p>
+    </div>
+    <Link
+      href="/fr/cardiologue-douala"
+      className="mt-3 inline-flex rounded-full bg-cyan-500 px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/30 transition hover:bg-cyan-400 md:mt-0"
+    >
+      Plus sur le cardiologue à Douala
+    </Link>
+  </div>
+</section>
+
+
           {/* CTA */}
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <Link
