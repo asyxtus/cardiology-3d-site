@@ -1,6 +1,7 @@
 // app/sections/AboutSectionFr.tsx
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import GlowBullet from "@/app/components/GlowBullet";
 import Image from "next/image";
