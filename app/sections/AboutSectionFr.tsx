@@ -72,7 +72,14 @@ export default function AboutSectionFr() {
               À propos de votre cardiologue
             </h2>
             <p className="text-sm text-slate-300 sm:text-base">
-              Le Dr Asah Syxtus, cardiologue à Douala, propose une prise en charge complète des maladies cardiovasculaires au Total Care Medical Clinic. 
+              Le Dr Asah Syxtus,{" "}
+  <Link
+    href="/fr/cardiologue-douala"
+    className="text-cyan-400 underline underline-offset-2 hover:text-cyan-300 transition"
+  >
+    cardiologue à Douala
+  </Link>
+  {" "}propose une prise en charge complète des maladies cardiovasculaires au Total Care Medical Clinic. 
               Spécialisé en cardiologie préventive, il réalise l’ECG, l’échographie cardiaque, l’évaluation du risque cardiovasculaire, le suivi de l’hypertension artérielle et des troubles du cholestérol
             </p>
           </div>
