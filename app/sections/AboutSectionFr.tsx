@@ -72,11 +72,8 @@ export default function AboutSectionFr() {
               À propos de votre cardiologue
             </h2>
             <p className="text-sm text-slate-300 sm:text-base">
-              Je suis médecin et cardiologue formé en Ukraine, actuellement en
-              exercice à Total Care Medical Clinic à Douala. Mon travail est
-              centré sur la cardiologie préventive&nbsp;: vous aider à
-              comprendre vos risques tôt, éviter les urgences et protéger votre
-              cœur sur le long terme.
+              Le Dr Asah Syxtus, cardiologue à Douala, propose une prise en charge complète des maladies cardiovasculaires au Total Care Medical Clinic. 
+              Spécialisé en cardiologie préventive, il réalise l’ECG, l’échographie cardiaque, l’évaluation du risque cardiovasculaire, le suivi de l’hypertension artérielle et des troubles du cholestérol
             </p>
           </div>
 
@@ -176,7 +173,7 @@ export default function AboutSectionFr() {
               l&apos;améliorer.
             </p>
             <p>
-              Que vous ayez une hypertension, un cholestérol élevé, une gêne
+              Que vous ayez une hypertension, insuffisance cardiaque, un cholestérol élevé, une gêne
               thoracique ou que vous souhaitiez simplement vérifier l&apos;état
               de votre cœur, vous pouvez demander une visite préventive avant
               que les problèmes ne deviennent urgents.
