@@ -26,12 +26,20 @@ export default function CardiologueDoualaPage() {
               maladies cardiovasculaires
             </h1>
             <p className="mt-4 text-sm md:text-base text-slate-300">
-              Le Dr Asah Syxtus, cardiologue à Douala, consulte au Total Care
-              Medical Clinic à Bonaberi. Il est spécialisé en cardiologie
-              préventive, ECG, échographie cardiaque et suivi de
-              l&apos;hypertension. Cette page est dédiée aux patients qui
-              recherchent une prise en charge cardiaque fiable à Douala.
-            </p>
+  Le Dr Asah Syxtus,{" "}
+  <Link
+    href="/fr/cardiologue-douala"
+    className="text-cyan-400 underline underline-offset-2 hover:text-cyan-300 transition"
+  >
+    cardiologue à Douala
+  </Link>
+  , consulte au Total Care Medical Clinic à Bonaberi. Il est
+  spécialisé en cardiologie préventive, ECG, échographie cardiaque
+  et suivi de l&apos;hypertension. Cette page est dédiée aux
+  patients qui recherchent une prise en charge cardiaque fiable à
+  Douala.
+</p>
+
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 href="/fr#booking"
